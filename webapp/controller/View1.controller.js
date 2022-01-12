@@ -10,20 +10,24 @@ sap.ui.define([
 
         return Controller.extend("project1.controller.View1", {
             onInit: function () {
-                var userDetails = {
-                    firstname: "Dummy",
-                    lastname: "User",
-                    email: "dummy.user@com",
-                    name: "dummy.user@com",
-                    displayName: "Dummy User (dummy.user@com)"
-                };
+                var userDetails;
                 if (sap.ushell) {
-                    var userInfo = sap.ushell.Container.getService("UserInfo");
-                    userDetails.firstname = userInfo.getFirstName();
-                    userDetails.lastname = userInfo.getLastName();
-                    userDetails.email = userInfo.getEmail();
-                    userDetails.name = userDetails.firstname + " " + userDetails.lastname;
-                    userDetails.displayName = userInfo.getId();
+                    var userInfo = sap.ushell.Container.getUser();
+                    userDetails = {
+                        name: userDetails.getFullName(),
+                        firstname: userInfo.getFirstName(),
+                        lastname: userInfo.getLastName(),
+                        email: userInfo.getEmail(),
+                        displayName: userInfo.getInitials()
+                    };
+                } else {
+                    userDetails = {
+                        name: "Dummy User",
+                        firstname: "Dummy",
+                        lastname: "User",
+                        email: "dummyuser@gmail.com",
+                        displayName: "DU"
+                    };
                 }
                 this.getView().setModel(new JSONModel(userDetails), "userInfo");
                 // var oModel = new JSONModel();
