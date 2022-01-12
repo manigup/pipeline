@@ -27,9 +27,9 @@
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "demo",
+                    "semanticObject": "userinfo",
                     "action": "display",
-                    "title": "Demo App",
+                    "title": "User Details",
                     "icon": "sap-icon://customer"
                 }
             }
