@@ -14,7 +14,7 @@ sap.ui.define([
                 if (sap.ushell) {
                     var userInfo = sap.ushell.Container.getUser();
                     userDetails = {
-                        name: userDetails.getFullName(),
+                        name: userInfo.getFullName(),
                         firstname: userInfo.getFirstName(),
                         lastname: userInfo.getLastName(),
                         email: userInfo.getEmail(),
