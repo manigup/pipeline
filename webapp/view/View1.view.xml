@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" showHeader="false">
+					<content>
+						<f:SimpleForm
+                            id="f1"
+							editable="false"
+							layout="ResponsiveGridLayout"
+							title="User Info"
+							labelSpanXL="3"
+							labelSpanL="3"
+							labelSpanM="3"
+							labelSpanS="12"
+							adjustLabelSpan="false"
+							emptySpanXL="4"
+							emptySpanL="4"
+							emptySpanM="4"
+							emptySpanS="0"
+							columnsXL="1"
+							columnsL="1"
+							columnsM="1"
+							singleContainerFullSize="false"
+						>
+							<f:content>
+								<Label text="First Name" id="fn"/>
+								<Text text="{userInfo>/firstname}" id="fn1"/>
+								<Label text="Last Name" id="ln"/>
+								<Text text="{userInfo>/lastname}" id="ln1"/>
+								<Label text="Email" id="email"/>
+								<Text text="{userInfo>/email}" id="email1"/>
+								<Label text="Display Name" id="dn"/>
+								<Text text="{userInfo>/displayName}" id="dn1"/>
+							</f:content>
+						</f:SimpleForm>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
