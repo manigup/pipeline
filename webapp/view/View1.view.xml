@@ -30,14 +30,14 @@
 							singleContainerFullSize="false"
 						>
 							<f:content>
+                                <Label text="Display Name" id="dn"/>
+								<Text text="{userInfo>/displayName}" id="dn1"/>
 								<Label text="First Name" id="fn"/>
 								<Text text="{userInfo>/firstname}" id="fn1"/>
 								<Label text="Last Name" id="ln"/>
 								<Text text="{userInfo>/lastname}" id="ln1"/>
 								<Label text="Email" id="email"/>
 								<Text text="{userInfo>/email}" id="email1"/>
-								<Label text="Display Name" id="dn"/>
-								<Text text="{userInfo>/displayName}" id="dn1"/>
 							</f:content>
 						</f:SimpleForm>
 					</content>
